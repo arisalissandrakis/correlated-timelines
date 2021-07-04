@@ -4,19 +4,16 @@ blah
 
 As an example of usage, the following code should produce the data shown in the figure below
 
-`
-  example_timeline = generate_timeline()
-  example_timeline = smooth.spline(example_timeline, df=25)$y
-  example_timeline = example_timeline +smooth_noise()
-  example_timeline = scale_and_position_timeline(example_timeline, range=50, position = 75)
-`
+>  example_timeline = generate_timeline()
+example_timeline = smooth.spline(example_timeline, df=25)$y
+example_timeline = example_timeline +smooth_noise()
+example_timeline = scale_and_position_timeline(example_timeline, range=50, position = 75)
 
 ![fig1](/github_code_and_examples1.png)
 
 and the following code should produce the data shown in the figure below
 
-`
-  reference_timeline1 = generate_timeline(bumps = list(m=c(25),sd=c(5),a=c(25)),slope=.1)
+> reference_timeline1 = generate_timeline(bumps = list(m=c(25),sd=c(5),a=c(25)),slope=.1)
   reference_timeline1 = smooth.spline(reference_timeline1, df=25)$y
   reference_timeline1 = reference_timeline1 + smooth_noise()
   reference_timeline1 = scale_and_position_timeline(reference_timeline1, range=40, position = 20)
@@ -30,5 +27,5 @@ and the following code should produce the data shown in the figure below
   correlated_timeline = correlated_timeline + smooth_noise()
   correlated_timeline = scale_and_position_timeline(correlated_timeline, range=20, position = 80)
 
-`
+![fig1](/github_code_and_examples2.png)
 
