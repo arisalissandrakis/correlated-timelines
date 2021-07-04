@@ -1,6 +1,11 @@
 # correlated-timelines
 blah
 
+## Datasets used
+
+datsets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction withinthe context of Collaborative Immersive Analytics`  
+
+
 ## R code
 
 The file XXX includes the code for three useful functions: **generate_timeline()** to generate a time according to various parameters, **smooth_noise()** to generate additional smoothed noise to add to any timelines, and **scale_and_position_timeline()** to scale and position vertically any generated timeline.
@@ -16,7 +21,7 @@ As an example of using the **generate_timeline()**, **smooth_noise()**, and **sc
 
 ![fig1](/github_code_and_examples1.png)
 
-Furthermore, and the following code should produce the data shown in the figure below; generating two timelines and then adding them in a weighted way to generate a third timeline which is postively correlated with the first timeline and negatively correlated withe the second. 
+Furthermore, the following code should produce the data shown in the figure below; generating two timelines and then adding them in a weighted way to generate a third timeline which is postively correlated with the first timeline and negatively correlated withe the second. 
 
     reference_timeline1 = generate_timeline(bumps = list(m=c(25), sd=c(5), a=c(25)), slope=.1)
     reference_timeline1 = smooth.spline(reference_timeline1, df=25)$y
@@ -36,3 +41,4 @@ Furthermore, and the following code should produce the data shown in the figure 
 
 In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated are $\rho$=0.62, p=.00 and $\rho$=-0.56, p=.00 respectively. 
 
+Note that due to randomness, executing the provieded code will not reproduce exactly these results.
