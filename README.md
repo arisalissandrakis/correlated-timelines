@@ -6,13 +6,12 @@ As an example of usage, the following code should produce the data shown in the 
 
 `
   example_timeline = generate_timeline()
-  
   example_timeline = smooth.spline(example_timeline, df=25)$y
-
   example_timeline = example_timeline +smooth_noise()
-
   example_timeline = scale_and_position_timeline(example_timeline, range=50, position = 75)
-`  
+`
+
+![fig1](/github_code_and_examples1.png)
 
 and the following code should produce the data shown in the figure below
 
