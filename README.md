@@ -34,5 +34,5 @@ Furthermore, and the following code should produce the data shown in the figure 
 
 ![fig1](/github_code_and_examples2.png)
 
-In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated are $\rho$= , p=. and $\rho$= , p=. respectively. 
+In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated are $\rho$= 0.62, p=.00 and \rho = -0.56, p=.00 respectively. 
 
