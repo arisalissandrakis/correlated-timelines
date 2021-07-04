@@ -3,16 +3,16 @@ blah
 
 ## Datasets used
 
-datsets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction withinthe context of Collaborative Immersive Analytics`  
+datsets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren. 
 
 
 ## R code
 
-The file XXX includes the code for three useful functions: **generate_timeline()** to generate a time according to various parameters, **smooth_noise()** to generate additional smoothed noise to add to any timelines, and **scale_and_position_timeline()** to scale and position vertically any generated timeline.
+The file XXX includes the code for three useful functions: `generate_timeline` to generate a time according to various parameters, `smooth_noise` to generate additional smoothed noise to add to any timelines, and `scale_and_position_timeline` to scale and position vertically any generated timeline.
 
-## Example of use
+### Example of use
 
-As an example of using the **generate_timeline()**, **smooth_noise()**, and **scale_and_position_timeline()** functions, the following code should produce the data shown in the figure below:
+As an example of using these functions, the following code should produce the data shown in the figure below:
 
     example_timeline = generate_timeline()
     example_timeline = smooth.spline(example_timeline, df=25)$y
