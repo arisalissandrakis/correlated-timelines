@@ -8,7 +8,17 @@ datsets used for the user study presented in the submitted manucript `Investigat
 
 ## R code
 
-The file XXX includes the code for three useful functions: `generate_timeline` to generate a time according to various parameters, `smooth_noise` to generate additional smoothed noise to add to any timelines, and `scale_and_position_timeline` to scale and position vertically any generated timeline.
+The file `correlated-timelines_functions.r` includes the code for three useful functions: 
+* `generate_timeline` to generate a timeline (a vector of length `sample_size`) according to various parameters, 
+    * `min_val`, `max_val` -- minimum and maximum values,
+    * `slope` -- regression slope,
+    * `noise_amount` -- amplitude of normally distributed random noise to be added,
+    * `bumps` -- a series of normal distributions to be added to the timeline, defined as a list of vectors containing values for  
+        *  means `m` (where each bump is centered along the timeline),
+        *  standard deviation `sd` (spread of each bump),
+        *  peak amplitude `a` of each bump,
+* `smooth_noise` to generate a smoothed spline that can be added as noise to any generated timelines, and 
+* `scale_and_position_timeline` to scale and position vertically any previously generated timeline.
 
 ### Example of use
 
