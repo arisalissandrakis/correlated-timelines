@@ -2,16 +2,16 @@
 
 This depository contains the datasets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren, as well as the R code used to generate them and examples of using the provided functions. 
 
-The study required a multivariate spatio-temproal dataset that participants could collaborate on to complete analytics tasks.
-We came up with the approach of generating correlated (according to a given model) timeline data as a flexible way to have tasks of comparable structure and complexity for when the participants needed to switch interfaces.
-Please see the article for more details on the study results and analysis.
+The study required a multivariate spatio-temproal dataset for participants to collaborate on and complete analytics tasks.
+We came up with the approach of generating correlated (according to a given model) timeline data as a flexible way to have task setups of comparable structure and complexity for when the participants needed to switch interfaces.
+Please see the article for more details on the study purpose, results, and analysis.
 
 ## Datasets used
 
 The two datasets used in the study are provieded in the archive `datasets.zip`.
 
-The archive contains two directories, `fruits task` and `veggies task`, with the full dataset for each task.
-For each task there were seven parameters: two for _climate_ (_sunlight_ and _humidity_) and five for _plants_ (either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits task dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies task dataset). 
+The archive contains two directories, `fruits task` and `veggies task`, with the full dataset for each task setup.
+For each task setup there are seven parameters: two for _climate_ (_sunlight_ and _humidity_) and five for _plants_ (either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits task dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies task dataset). 
 Each of the two subdirectories contains 39 CSV files (named after European countries) that corresponded to spatial locations in our study.
 Each CSV has three columns: _dimension_ (parameter name), _time_, and _value_.
 
@@ -28,6 +28,8 @@ and for the _veggies_ task:
 |-------------:|----------|----------|----------|----------|----------|
 | **humidity** | negative | positive | positive | positive | negative |
 | **sunlight** | positive | positive | positive | negative | negative |
+
+The pairs of participants, using a combination of immersive and non-immersive interfaces, were asked to collaboratively determine the correlations between the two climate parameters and the five plant ones.
 
 The datasets were generated using the provided R functions -- for each location first the humidity and sunlight timelines were generated, and then the timelines for each of the five plants, according to the model above (adding the two climate timelines using the weights from the model, either one or minus one).
 
