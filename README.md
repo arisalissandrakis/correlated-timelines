@@ -1,13 +1,41 @@
 # correlated-timelines
-blah
+
+This depository contains the datasets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren, as well as the R code used to generate them and examples of using the provided functions. 
+
+The study required a multivariate spatio-temproal dataset that participants could collaborate on to complete analytics tasks.
+We came up with the approach of generating correlated (according to a given model) timeline data as a flexible way to have tasks of comparable structure and complexity for when the participants needed to switch interfaces.
+Please see the article for more details on the study results and analysis.
 
 ## Datasets used
 
-datsets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren. 
+The two datasets used in the study are provieded in the directory `datasets`.
+
+The subdirectories `fruits task` and `veggies task` contain the full dataset for each task.
+In each task there were seven parameters: two for _climate_ (_sunlight_ and _humidity_) and five for _plants_ (either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits task dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies task dataset). 
+Each of the two subdirectories contains 39 CSV files (named after European countries) that corresponded to spatial locations in our study.
+Each CSV has three columns: _dimension_ (parameter name), _time_, and _value_.
+
+Independent of the location, the climate and plant data are correlated to each other as follows for the _fruits_ task:
+
+|              | Apples   | Oranges  | Bananas  | Berries  | Grapes   |
+|-------------:|----------|----------|----------|----------|----------|
+| **humidity** | positive | positive | negative | negative | positive |
+| **sunlight** | positive | negative | negative | positive | positive |
+
+and for the _veggies_ task:
+
+|              | Tomatoes | Carrots  | Potatoes | Cabbages | Letuces  |
+|-------------:|----------|----------|----------|----------|----------|
+| **humidity** | negative | positive | positive | positive | negative |
+| **sunlight** | positive | positive | positive | negative | negative |
+
+The datasets were generated using the provided R functions -- for each location first the humidity and sunlight timelines were generated, and then the timelines for each of the five plants, according to the model above (adding the two climate timelines using the weights from the model, either one or minus one).
+
 
 
 ## R code
 
+The method used can easily be generalized to have any number of timeline data correlated in various ways, therefore we provide here the R code used.
 The file `correlated-timelines_functions.r` includes the code for three useful functions: 
 * `generate_timeline` to generate a timeline (a vector of length `sample_size`) according to various parameters, 
     * `min_val`, `max_val` -- minimum and maximum values,
@@ -49,6 +77,6 @@ Furthermore, the following code produced the data shown in the figure below; two
 
 ![fig1](/github_code_and_examples2.png)
 
-In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated are $\rho$=0.62, p=.00 and $\rho$=-0.56, p=.00 respectively. 
+In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated to are ρ=0.62, p=.00 and ρ=-0.56, p=.00 respectively, confirming statistically the impression that can be obtained by visual inspection. 
 
-Note that due to randomness, executing the provieded code will not reproduce exactly these results.
+Note that due to randomness, executing the provieded two snippets of code will not reproduce exactly the same results.
