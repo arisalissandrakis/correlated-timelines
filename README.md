@@ -14,6 +14,7 @@ The archive contains two directories, `fruits task` and `veggies task`, with the
 For each task setup there are seven parameters: two for _climate_ (_sunlight_ and _humidity_) and five for _plants_ (either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits task dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies task dataset). 
 Each of the two subdirectories contains 39 CSV files (named after European countries) that corresponded to spatial locations in our study.
 Each CSV has three columns: _dimension_ (parameter name), _time_, and _value_.
+Each timeline has 150 time events that are assumed to correspond across all timelines; excluding the header row, the climate CSV files have 300 rows (2 x 150), and the plant CSV files 750 rows (5 x 150). 
 
 Independent of the location, the climate and plant data are correlated to each other as follows for the _fruits_ task:
 
@@ -31,15 +32,13 @@ and for the _veggies_ task:
 
 The pairs of participants, using a combination of immersive and non-immersive interfaces, were asked to collaboratively determine the correlations between the two climate parameters and the five plant ones.
 
-The datasets were generated using the provided R functions -- for each location first the humidity and sunlight timelines were generated, and then the timelines for each of the five plants, according to the model above (adding the two climate timelines using the weights from the model, either one or minus one).
+The datasets were generated using the provided R functions -- for each location the humidity and sunlight timelines were generated, and then the timelines for each of the five plants, according to one of the models above (adding the two climate timelines and using the weights from the model, either one or minus one).
 
-The following two figures show that the generated data followed the two models; note that due to randomness in the process, the data for some locations were more or less strongly correlated (but still obeying the intended direction). Additionally, for some locations the p-values were above a .01 or .05 significance level, hence the less than 39 sample size in some cases.
+The following two figures show that the generated data followed the two models; note that due to randomness in the process, the data for some locations were strongly or moderately correlated (but still along the intended direction). Additionally, for some locations the p-values were above the .01 significance level, and were excluded from shown here (resulting in less than 39 sample sizes in some cases).
 
-![cor_fruits](/fruits_task_correlations.png)
-
-![cor_veggies](/veggies_task_correlations.png)
-
-
+Fruits             |  Veggies
+:-------------------------:|:-------------------------:
+![cor_fruits](/fruits_task_correlations.png)  |  ![cor_veggies](/veggies_task_correlations.png)
 
 ## R code
 
