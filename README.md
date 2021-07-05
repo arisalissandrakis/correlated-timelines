@@ -83,6 +83,6 @@ Furthermore, the following code produced the data shown in the figure below; two
 
 ![fig2](/github_code_and_examples2.png)
 
-In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated to are ρ=0.62, p=.00 and ρ=-0.56, p=.00 respectively, confirming statistically the impression that can be obtained by visual inspection. 
+In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated to are ρ=0.62, p=.00 and ρ=-0.56, p=.00 respectively, confirming statistically the empirical observation that can be obtained by visual inspection. 
 
 Note that due to randomness, executing the provieded two snippets of code will not reproduce exactly the same results.
