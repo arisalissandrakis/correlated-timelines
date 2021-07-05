@@ -8,10 +8,10 @@ Please see the article for more details on the study results and analysis.
 
 ## Datasets used
 
-The two datasets used in the study are provieded in the directory `datasets`.
+The two datasets used in the study are provieded in the archive `datasets.zip`.
 
-The subdirectories `fruits task` and `veggies task` contain the full dataset for each task.
-In each task there were seven parameters: two for _climate_ (_sunlight_ and _humidity_) and five for _plants_ (either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits task dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies task dataset). 
+The archive contains two directories, `fruits task` and `veggies task`, with the full dataset for each task.
+For each task there were seven parameters: two for _climate_ (_sunlight_ and _humidity_) and five for _plants_ (either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits task dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies task dataset). 
 Each of the two subdirectories contains 39 CSV files (named after European countries) that corresponded to spatial locations in our study.
 Each CSV has three columns: _dimension_ (parameter name), _time_, and _value_.
 
@@ -30,6 +30,12 @@ and for the _veggies_ task:
 | **sunlight** | positive | positive | positive | negative | negative |
 
 The datasets were generated using the provided R functions -- for each location first the humidity and sunlight timelines were generated, and then the timelines for each of the five plants, according to the model above (adding the two climate timelines using the weights from the model, either one or minus one).
+
+The following two figures show that the generated data followed the two models; note that due to randomness in the process, the data for some locations were more or less strongly correlated (but still obeying the intended direction). Additionally, for some locations the p-values were above a .01 or .05 significance level, hence the less than 39 sample size in some cases.
+
+![cor_fruits](/fruits_task_correlations.png)
+
+![cor_veggies](/veggies_task_correlations.png)
 
 
 
@@ -75,7 +81,7 @@ Furthermore, the following code produced the data shown in the figure below; two
     correlated_timeline = correlated_timeline + smooth_noise()
     correlated_timeline = scale_and_position_timeline(correlated_timeline, range=20, position = 80)
 
-![fig1](/github_code_and_examples2.png)
+![fig2](/github_code_and_examples2.png)
 
 In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated to are ρ=0.62, p=.00 and ρ=-0.56, p=.00 respectively, confirming statistically the impression that can be obtained by visual inspection. 
 
