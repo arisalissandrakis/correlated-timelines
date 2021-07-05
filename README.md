@@ -22,7 +22,7 @@ The file `correlated-timelines_functions.r` includes the code for three useful f
 
 ### Example of use
 
-As an example of using these functions, the following code should produce the data shown in the figure below:
+As an example of using these functions, the following code produced the data shown in the figure below:
 
     example_timeline = generate_timeline()
     example_timeline = smooth.spline(example_timeline, df=25)$y
@@ -31,7 +31,7 @@ As an example of using these functions, the following code should produce the da
 
 ![fig1](/github_code_and_examples1.png)
 
-Furthermore, the following code should produce the data shown in the figure below; generating two timelines and then adding them in a weighted way to generate a third timeline which is postively correlated with the first timeline and negatively correlated withe the second. 
+Furthermore, the following code produced the data shown in the figure below; two timelines were generated (as above) and then were added in a weighted way to generate a third timeline which then _postively correlated_ with the first and _negatively_ correlated withe the second timeline. 
 
     reference_timeline1 = generate_timeline(bumps = list(m=c(25), sd=c(5), a=c(25)), slope=.1)
     reference_timeline1 = smooth.spline(reference_timeline1, df=25)$y
