@@ -1,6 +1,6 @@
 # correlated-timelines
 
-This depository contains the datasets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren, as well as the R code used to generate them and examples of using the provided functions. 
+This depository contains the two datasets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren, as well as the R code used to generate them and examples of using the provided functions. 
 
 The study required a multivariate spatio-temporal dataset for participants to collaborate on and complete analytics tasks.
 We came up with the approach of generating correlated (according to a given model) timeline data as a flexible way to have task setups of comparable structure and complexity for when the participants needed to switch interfaces.
@@ -8,22 +8,20 @@ Please see the article for more details on the study purpose, results, and analy
 
 ## Datasets used
 
-The two datasets used in the study are provieded in the archive `datasets.zip`.
+The two datasets used in the study are provieded in the two CSV files `fruits_dataset.csv` and `veggies_dataset.csv`.
 
-The archive contains two directories, `fruits task` and `veggies task`, with the full dataset for each task setup.
-For each task setup there are seven parameters: two for _climate_ (_sunlight_ and _humidity_) and five for _plants_ (either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits task dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies task dataset). 
-Each of the two subdirectories contains 39 CSV files (named after European countries) that corresponded to spatial locations in our study.
-Each CSV has three columns: _dimension_ (parameter name), _time_, and _value_.
-Each timeline has 150 time events that are assumed to correspond across all timelines; excluding the header row, the climate CSV files have 300 rows (2 x 150), and the plant CSV files 750 rows (5 x 150). 
+Each file has four paramaters: location (39 names of European countries), dimension (five _plant_ and two _climate_), time (a series of 150 events), and value (for the dimensions).
+The two dimensions for climate are _sunlight_ and _humidity_, and the five for plants are either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies dataset. 
+Each file has 39 locations x 7 dimensions x 150 time events = 40,950 rows.
 
-Independent of the location, the climate and plant data are correlated to each other as follows for the _fruits_ task:
+Independent of the location, the climate and plant data are meant to correlate to each other as follows for the _fruits_ task setup:
 
 |              | Apples   | Oranges  | Bananas  | Berries  | Grapes   |
 |-------------:|----------|----------|----------|----------|----------|
 | **humidity** | positive | positive | negative | negative | positive |
 | **sunlight** | positive | negative | negative | positive | positive |
 
-and for the _veggies_ task:
+and for the _veggies_ task setup:
 
 |              | Tomatoes | Carrots  | Potatoes | Cabbages | Letuces  |
 |-------------:|----------|----------|----------|----------|----------|
