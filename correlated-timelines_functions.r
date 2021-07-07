@@ -1,6 +1,12 @@
+#   R version: 4.0.2 x64
+#   RStudio version: Version 1.3.1056 (Win 10)
+#
+#   Author: Aris Alissandrakis
+#   Web: https://arisalissandrakis.wordpress.com/
+#   Twitter: @AAlissandrakis
+
 
 # Timelines are vectors of length equal to the number of time events (sample size, n, etc)
-
 
 # The generate_timeline function returns a vector or length "sample_size", 
 # with minimum and maximum values "min_val" and "max_val",
@@ -16,8 +22,7 @@ generate_timeline <- function(sample_size = 150, min_val = 0, max_val = 100, slo
   {
     n_bumps = length(bumps$m) 
   }
-  
-  
+
   X = c()
   Y = c()
   
@@ -41,7 +46,6 @@ generate_timeline <- function(sample_size = 150, min_val = 0, max_val = 100, slo
     }
     
     y = y + (noise_amount * y) * rnorm(1)  # add noise
-    
     
     X = c(X, x)
     Y = c(Y, y)
@@ -76,8 +80,7 @@ smooth_noise <- function(n=150, a=10)
   # initialize a vector of size n
   
   w0 = sample(c(1:n),15)
-  
-  
+
   # randomly choose 15 indexes from 1 to n
   
   for (i in w0)
