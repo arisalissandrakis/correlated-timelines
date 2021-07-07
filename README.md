@@ -10,7 +10,7 @@ Please see the article for more details on the study purpose, results, and analy
 
 The two datasets used in the study are provieded in the two CSV files `fruits_dataset.csv` and `veggies_dataset.csv`.
 
-Each file has four paramaters: location (39 names of European countries), dimension (five _plant_ and two _climate_), time (a series of 150 events), and value (for the dimensions).
+Each file has four parameters: location (39 names of European countries), dimension (five _plant_ and two _climate_), time (a series of 150 events), and value (for the dimensions).
 The two dimensions for climate are _sunlight_ and _humidity_, and the five for plants are either _Apples_, _Oranges_, _Bananas_, _Berries_, and _Grapes_ for the fruits dataset, or _Tomatoes_, _Carrots_, _Potatoes_, _Cabbages_, and _Lettuces_ for the veggies dataset. 
 Each file has 39 locations x 7 dimensions x 150 time events = 40,950 rows.
 
