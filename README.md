@@ -64,7 +64,7 @@ As an example of using these functions, the following code produced the data sho
     example_timeline = example_timeline + smooth_noise()
     example_timeline = scale_and_position_timeline(example_timeline, range=50, position = 75)
 
-![fig1](/github_code_and_examples1.png)
+![fig1](/github_code_and_examples.png)
 
 Furthermore, the following code produced the data shown in the figure below; two timelines were generated (as above) and then were added in a weighted way to generate a third timeline which then _postively correlated_ with the first and _negatively_ correlated withe the second timeline. 
 
@@ -82,7 +82,7 @@ Furthermore, the following code produced the data shown in the figure below; two
     correlated_timeline = correlated_timeline + smooth_noise()
     correlated_timeline = scale_and_position_timeline(correlated_timeline, range=20, position = 80)
 
-![fig2](/github_code_and_examples2.png)
+![fig2](/github_code_and_examples.png)
 
 In the above example, the Pearson correlation coefficient and the p-values between the correlated timeline and the timelines to be positively and negatively correlated to are ρ=0.58, p=.00 and ρ=-0.57, p=.00 respectively, confirming statistically the empirical observation that can be obtained by visual inspection. 
 
