@@ -1,6 +1,6 @@
 # correlated-timelines
 
-This depository contains the two datasets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren, as well as the R code used to generate them and examples of using the provided functions. 
+This repository contains the two datasets used for the user study presented in the submitted manucript `Investigating Collaboration Coupling Styles in Synchronous Asymmetric Interaction within the context of Collaborative Immersive Analytics` by Nico Reski, Aris Alissandrakis, and Andreas Kerren, as well as the R code used to generate them and examples of using the provided functions. 
 
 The study required a multivariate spatio-temporal dataset for participants to collaborate on and complete analytics tasks.
 We came up with the approach of generating correlated (according to a given model) timeline data as a flexible way to have task setups of comparable structure and complexity for when the participants needed to switch interfaces.
